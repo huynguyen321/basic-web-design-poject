@@ -1,0 +1,114 @@
+{
+  "product": [
+    {
+      "id": 1,
+      "name": "Áo dài cách tân",
+      "img1": "https://fmstyle.com.vn/images/anhnho/760236_502111584__MG_2461.jpg",
+      "img2": "https://fmstyle.com.vn/images/anhnho/760236_502111584__MG_2461.jpg",
+      "img3": "https://fmstyle.com.vn/images/anhnho/760236_502111584__MG_2461.jpg",
+      "price": "275.000",
+      "tag": "Nữ"
+    },
+    {
+      "id": 2,
+      "name": "Áo dài cách tân",
+      "img1": "https://fmstyle.com.vn/images/anhnho/760236_502111584__MG_2461.jpg",
+      "img2": "https://fmstyle.com.vn/images/anhnho/760236_502111584__MG_2461.jpg",
+      "img3": "https://fmstyle.com.vn/images/anhnho/760236_502111584__MG_2461.jpg",
+      "price": "275.000",
+      "tag": "Nữ"
+    },
+    {
+      "id": 3,
+      "name": "namishop",
+      "img1": "https://fmstyle.com.vn/images/anhnho/786607_970366210__MG_3766.jpg",
+      "img2": "https://fmstyle.com.vn/images/anhnho/786607_970366210__MG_3766.jpg",
+      "img3": "https://fmstyle.com.vn/images/anhnho/786607_970366210__MG_3766.jpg",
+      "price": "225000",
+      "tag": "Nữ"
+    },
+    {
+      "id": 4,
+      "name": "áo dài",
+      "img1": "https://fmstyle.com.vn/images/anhnho/786607_970366210__MG_3766.jpg",
+      "img2": "https://fmstyle.com.vn/images/anhnho/786607_970366210__MG_3766.jpg",
+      "img3": "https://fmstyle.com.vn/images/anhnho/786607_970366210__MG_3766.jpg",
+      "price": "275000",
+      "tag": "Thu-Đông "
+    },
+    {
+      "name": "Áo dài",
+      "img1": "https://fmstyle.com.vn/images/anhnho/786607_970366210__MG_3766.jpg",
+      "img2": "https://fmstyle.com.vn/images/anhnho/786607_970366210__MG_3766.jpg",
+      "img3": "https://fmstyle.com.vn/images/anhnho/786607_970366210__MG_3766.jpg",
+      "price": "226000",
+      "tag": "Nữ",
+      "id": 5
+    },
+    {
+      "name": "áo dài",
+      "img1": "https://fmstyle.com.vn/images/anhnho/786607_970366210__MG_3766.jpg",
+      "img2": "https://fmstyle.com.vn/images/anhnho/786607_970366210__MG_3766.jpg",
+      "img3": "https://fmstyle.com.vn/images/anhnho/786607_970366210__MG_3766.jpg",
+      "price": "220000",
+      "tag": "Nữ",
+      "id": 6
+    },
+    {
+      "name": "huy",
+      "img1": "https://fmstyle.com.vn/images/anhnho/786607_970366210__MG_3766.jpg",
+      "img2": "https://fmstyle.com.vn/images/anhnho/786607_970366210__MG_3766.jpg",
+      "img3": "https://fmstyle.com.vn/images/anhnho/786607_970366210__MG_3766.jpg",
+      "price": "2000",
+      "tag": "Nam",
+      "id": 7
+    }
+  ],
+  "customer": [
+    {
+      "id": "1",
+      "email": "ngaabc123@gmail.com",
+      "name": "Nga",
+      "phone": "0987654234",
+      "address": "Nga",
+      "password": "nga123A",
+      "role": "user"
+    },
+    {
+      "id": "2",
+      "email": "admin@gmail.com",
+      "name": "admin",
+      "phone": "0987643467",
+      "address": "address",
+      "password": "1",
+      "role": "admin"
+    },
+    {
+      "id": 3,
+      "email": "123@gmail.com",
+      "name": "huy",
+      "phone": "031654987",
+      "address": "123",
+      "password": "123456aA",
+      "role": "user"
+    },
+    {
+      "id": 4,
+      "email": "huy.nguyen22@student.passerellesnumeriques.org",
+      "name": "Huy",
+      "phone": "123",
+      "address": "123",
+      "password": "123456aA",
+      "role": "user"
+    },
+    {
+      "id": 5,
+      "email": "nga.nguyen22@student.passerellesnumeriques.org",
+      "name": "Nguyễn Ngọc Huy",
+      "phone": "03256256465",
+      "address": "101B Lê Hưu Trác",
+      "password": "123456aA",
+      "role": "user"
+    }
+  ]
+}

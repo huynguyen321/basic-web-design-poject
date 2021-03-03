@@ -1,0 +1,95 @@
+* {
+    font-family: Helvetica;
+    font-size: 15px;
+}
+
+.divtong {
+    background-color: rgb(135, 245, 240);
+    width: 100%;
+    height: 100%;
+}
+
+.divtong .divimg3 {
+    width: 100%;
+    height: 400px;
+    text-align: center;
+}
+
+.divimg3 img {
+    box-shadow: 0px 5px 5px 0px gray;
+    width: 75%;
+    height: 100%;
+}
+
+.divtong .divimg1 {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.divimg1 img {
+    box-shadow: 0px 13px 13px 0px gray;
+    width: 100%;
+    height: 400px;
+}
+
+.divtong .divimg2 {
+    width: 100%;
+    height: 200px;
+    display: flex;
+}
+
+.divimg2 .divimg2left {
+    width: 50%;
+    text-align: right;
+}
+
+.divimg2left img {
+    width: 50%;
+    height: 100%;
+    margin-right: 10px;
+}
+
+.divimg2 .divimg2right {
+    width: 50%;
+    text-align: left;
+}
+
+.divimg2right img {
+    width: 50%;
+    height: 100%;
+    margin-left: 10px;
+}
+
+.divtong .divtext {
+    width: 100%;
+    height: 100%;
+    word-wrap: break-word;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.divtext .divtext1 {
+    width: 100%;
+}
+
+.divtext1 .H1 {
+    text-align: center;
+    color: blue;
+    font-size: 45px;
+}
+
+.divtext1 .H2 {
+    font-size: 24px;
+    color: blue;
+}
+
+.divtext1 .H3 {
+    color: blue;
+}
+
+.divtext1 .H5 {
+    color: green;
+}
+
+.divtext1 .H4 {
+    font-size: 14px;
+}

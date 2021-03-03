@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Services</title>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <meta name="viewport" content="width= device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+    <div id="fb=root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v7.0"></script>
+    <link rel="stylesheet" href="../css/ServicePage.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="col-md-12" style="background-color: rgb(206, 206, 206);">
+            <div class="container top">
+                <div class="col-md-6 float-left">CSKH: 0355 627 835</div>
+                <div class="col-md-6" id="top-icon">
+                    <a href="#"><i class="fab fa-facebook-square"></i></a>
+                    <a href="#"><i class="fab fa-facebook-messenger"></i></a>
+                    <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="navbar">
+            <div class="container">
+                <div class="col-md-2 text-center">
+                    <a href="../html/index.html">
+                        <img src="../images/logo/logo.png" alt="LOGO" class="img-fluid w-90 p-2">
+                    </a>
+                </div>
+
+                <div class="search col-md-5">
+                    <input id="search-bar" type="search" placeholder="Search" aria-label="Search">
+                    <button class="button" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                </div>
+
+
+                <div class="col-md item text-center" id="control-accout">
+                    <button>
+                        <i class="fas fa-clipboard-list fa-fw"></i>Theo dõi đơn hàng
+                    </button>
+                    <button onclick="callFormSignIn()" data-toggle="modal" data-target="#loginModal">
+                        <i class=" fa fa-user fa-fw" aria-hidden="true"></i>Đăng nhập
+                    </button>
+                    <button onclick="callFormSignUp()" data-toggle="modal" data-target="#signUpModal">
+                        <i class="fa fa-key fa-fw"></i> Đăng ký
+                    </button>
+                </div>
+                <div id="form-sign-in"></div>
+                <div id="form-sign-up"></div>
+            </div>
+        </div>
+
+        <nav class="container navbar navbar-expand-md navi" id="headnav">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-bars" aria-hidden="true"></i>Danh mục sản phẩm
+                    </a>
+                    <div class="dropdown-menu drop" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Nữ</a>
+                        <a class="dropdown-item" href="#">Nam</a>
+                        <a class="dropdown-item" href="#">Đồ đôi</a>
+                        <a class="dropdown-item" href="#">Thời trang thu-đông</a>
+                    </div>
+                </div>
+
+                <div class="navbar-nav main-nav" id="my-main-nav">
+                    <button class="nav-item">
+                        <a class="nav-link" href="../html/index.html">Trang chủ <span
+                                class="sr-only">(current)</span></a>
+                    </button>
+                    <button class="nav-item">
+                        <a class="nav-link" href="../html/intro.html">Giới thiệu</a>
+                    </button>
+                    <button class="nav-item">
+                        <a class="nav-link" href="../html/ServicePage.html">Dịch vụ</a>
+                    </button>
+                    <button class="nav-item">
+                        <a class="nav-link" href="../html/about.html">Liên hệ</a>
+                    </button>
+
+                    <button class="nav-item option-cart">
+                        <div class=""><i class="fa fa-shopping-cart" aria-hidden="true"></i>Giỏ hàng
+                            <span class="cart_no" id="cart_no">0</span>
+                        </div>
+                        <div class="dropdown-menu option-cart-item" aria-labelledby="navbarDropdown">
+                            <ul class="col-12 col-md-12">
+                                <li id="shopping-cart">
+                                    <div class="cart-item">
+                                        <div class="image"><img
+                                                src="https://fmstyle.com.vn/images/anhnho/787290_1787551762__MG_1962.jpg"
+                                                alt="">
+                                        </div>
+                                        <div class="item-description">
+                                            <p class="name">Vay co V nhun duoi ca VU1511A</p>
+                                            <p>Size: <span class="light-red">L</span><br>Số lượng: <span
+                                                    class="light-red">01</span></p>
+                                        </div>
+                                        <div class="right">
+                                            <p class="price">130.000đ</p>
+                                            <i class="fa fa-times remove" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </li>
+
+
+                                <li style="border: none;">
+                                    <div class="row text-left col-6 col-md-6">
+                                        <div class="col-6 col-md-6">Tổng</div>
+                                        <div class="col-6 col-md-6" id="total">130.000đ</div>
+                                    </div>
+                                    <div class="btn btn-outline-danger">Thanh toán</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </button>
+
+
+                </div>
+            </div>
+
+            <script>
+                // Script for top Navigation Menu
+                jQuery(window).bind('scroll', function() {
+                    if (jQuery(window).scrollTop() > 100) {
+                        jQuery('#headnav').addClass('fixed-top').removeClass('navi');
+                    } else {
+                        jQuery('#headnav').removeClass('fixed-top').addClass('navi');
+                    }
+                });
+            </script>
+
+            <!-- <div id="nav-bar-repon"></div> -->
+
+        </nav>
+    </header>
+
+    <div class="divtong">
+        <!-- Hình ảnh 1 -->
+        <div class="divimg1">
+            <img src="https://i.pinimg.com/originals/cd/95/28/cd95281ea7e07a34b22c0260a420224a.png" alt="">
+        </div>
+
+        <!-- Văn bản 1 -->
+        <div class="divtext1">
+            <span>
+                <blockquote cite="http://www.worldwildlife.org/who/index.html">
+                    <br>
+                    <p class="H1">CHÍNH SÁCH BẢO HÀNH VÀ ĐỔI TRẢ</p>
+                    <br>
+                    <p>1.Điều kiện đổi hàng</p>
+                    Quý khách cần kiểm tra tình trạng hàng hóa và có thể đổi hàng/trả hàng ngay tại thời điểm giao/nhận
+                    hàng trong những trường hợp sau:<br> - Hàng không đủ chủng loại, mẫu mã trong đơn hàng đã đặt hoặc
+                    như trên website tại thời điểm đặt hàng.<br> - Không đủ số lượng, không đủ bộ như trong đơn
+                    hàng.<br> - Khách hàng có trách nhiệm trình giấy tờ liên quan chứng minh sự thiếu sót trên để hoàn
+                    thành việc hoàn trả/đổi trả hàng hóa.<br><br>
+
+
+                    <p>2.Hình thức đổi trả</p>
+
+                    <i>Hình thức đổi trả đối với sản phẩm nguyên giá</i><br><br>- Trong vòng 48h kể từ lúc nhận hàng,
+                    <span class="H2">HDN Style shop </span>hỗ trợ khách hàng đổi size/ đổi màu/ đổi sản phẩm với điều kiện sản phẩm còn mới nguyên, chưa sử dụng, chưa giặt ủi.<br> Sản phẩm đổi trả phải còn nguyên tag và hoá đơn đi kèm.<br>-
+            Đối với trường hợp đổi sản phẩm khác, khách hàng vui lòng đổi sang sản phẩm có giá trị ngang hoặc lớn hơn. Trường hợp khách hàng đổi sang sản phẩm có giá trị thấp hơn, <span class="H2">HDN Style shop </span>xin phép không hoàn lại tiền chênh
+            lệch.
+            <br> Tất cả sản phẩm đã mua sẽ không được đổi trả lại bằng tiền mặt.<br><br>
+            <i>Hình thức đổi trả đối với sản phẩm giảm giá</i><br><br> Các sản phẩm giảm giá sẽ không chấp nhận đổi trả dù trong bất kì trường hợp nào.
+            </blockquote>
+            </span>
+        </div>
+
+        <!-- Div hình ảnh 2 -->
+        <div class="divimg2">
+            <img src="https://www.erponline.vn/web/image/124927/2-16.jpg">
+        </div>
+
+        <!-- Văn bản 2 -->
+        <div class="divtext1">
+            <span>
+                <blockquote cite="http://www.worldwildlife.org/who/index.html">
+                    <br>
+                    <p class="H1">PHƯƠNG THỨC THANH TOÁN</p>
+                    <br>
+                    Bạn không cần thanh toán lúc đặt đơn hàng. <span class="H2">HDN Style shop </span>sẽ trên toàn quốc cho bạn tại địa chỉ bạn hỗ trợ và nhận thanh toán ngay sau thời điểm giao hàng. lợi ích và dễ dàng với <span class="H2">HDN Style shop </span><br>
+            <span class="H2">HDN Style shop </span>mang các hình thức thanh toán:<br> * Phí khi nhận hàng (COD)
+            <br> * Thanh toán qua thẻ tín dụng/thẻ ghi nợ<br> * Thanh toán qua thẻ ATM nội địa<br> * nếu như bạn chọn mua hình thức thanh toán lúc nhận hàng Thanh toán COD thì lúc nhấn vào mức Thanh toán là đã hoàn tất mua hàng.<br>
+            <b>COD</b> được xem là viết tắt của có nghĩa là phí lúc nhận hàng. có phương thức thanh toán này, bạn trả tiền mặt cho giao hàng ngay trong khi nhận được đơn hàng của chính mình.<br> * <b>Lưu ý:
+                    </b>Chỉ áp dụng cho đơn hàng mang tổng giá trị bé nhiều hơn dưới 500.000 vnđ miễn phí ship hàng.<br> * nếu khách hàng thanh toán qua cách thức "Thanh toán ngân hàng" bạn vui mắt chọn mua người mua thanh toán theo 4 phương thức: - shop
+            online bởi thẻ ATM ngân hàng<br> - Visa/Master Card/JCB<br> - cách thức thanh toán phí giao hàng<br>
+            <br>
+            </blockquote>
+            </span>
+        </div>
+
+        <!-- Hình ảnh 3 -->
+        <div class="divimg3">
+            <img src="https://www.antlawyers.com/wp-content/uploads/2019/12/%C4%90%C3%A0-N%E1%BA%B5ng-m%E1%BB%9F-r%E1%BB%99ng-quan-h%E1%BB%87-h%E1%BB%A3p-t%C3%A1c-v%E1%BB%9Bi-Italia.jpg">
+        </div>
+
+        <!-- Văn bản 3 -->
+        <div class="divtext1">
+            <span>
+                <blockquote cite="http://www.worldwildlife.org/who/index.html">
+                    <br>
+                    <p class="H1">PHÍ GIAO HÀNG</p>
+                    <br>
+                    Thời trang ngày nay giao hàng siêu tốc tới mọi vật các thành thị bên trên phạm vi lãnh thổ nước ta.
+                    dù bạn ở những tỉnh vùng cao như Cao bằng, Bắc Cạn hay những tỉnh tận cộng của việt nam cà mau. chỉ
+                    cần nhấp chuột đặt sắm sản phẩm bạn sẽ nhận đc hàng trong tiến trình nhanh nhất. <span
+                        class="H2">HDN Style shop </span><br>
+
+            </blockquote>
+            </span>
+        </div>
+
+        <!-- Hình ảnh 4 -->
+        <div class="divimg3">
+            <img src="https://thoitrangngaynay.com/upload/images/bang-phi-giao-hang-thoi-trang.png">
+        </div>
+
+        <!-- Văn bản 4 -->
+        <div class="divtext1">
+            <span>
+                <blockquote cite="http://www.worldwildlife.org/who/index.html">
+                    <br>
+                    Thời gian giao vận, cước ship sẽ đc tính tùy theo sự phân chia phân khúc thị thành. tất cả các đơn
+                    hàng của bạn đều đc Thời trang ngày nay tập luyện chuyển phát nhanh chóng. hiện nay <span
+                        class="H2">HDN Style shop </span>đang cộng tác mang những công ty giao vận uy tín hàng đầu hiện thời như VNPT, SB&P, giao hàng nhanh, Netco.
+            <br> Sau khoản thời gian chào đón & giải quyết và xử lý deals của bạn, <span class="H2">HDN
+                        Style shop </span>sẽ triển khai phân chiếc and thực hiện đóng gói. thời hạn tổng kết deals sẽ vào thời điểm 16h15 hàng ngày và giao cho nhà luân chuyển tức thì kế tiếp.<br> Các đơn hàng phát sinh sau 16h15 and trước 11h15 đúng
+            ngày hôm sau sẽ được thực hiện đóng gói và giao cho mái ấm giao vận vào thời điểm 11h30 cùng Trong ngày.<br> Các đơn hàng phát sanh sau 11h15 tới 16h cùng ngày sẽ được thực hiện đóng gói & giao cho tổ ấm giao vận vào thời gian 16h15 của đến
+            ngày hôm đấy. Để biết bổ xung mình đang sống ở Khu Vực nào, người dùng sung sướng xem xét lại danh sách Phân khúc tỉnh thành ở bên trên.<br> Thời trang ngày nay sẽ đóng & luân chuyển hàng theo đúng trong time quyết định theo khoanh vùng vận
+            chuyển ở trên. <span class="H2">HDN Style shop </span>luôn luôn lỗ lực để trên toàn quốc theo đúng cam đoan, nhưng trong một số trong những ví như đơn hàng có thể giao không đúng có thời hạn quyết định & sẽ chậm trong khoảng thời gian ngắn.
+            cực kỳ mong nhận được sự mách tự khách hàng.<br> Nhân viên giao hàng của <span class="H2">HDN Style shop </span>sẽ tương tác mang người dùng nhiều nhất 3 lần, sau 3 lần liên hệ còn nếu như không giao hàng đc cho người dùng, giao hàng sẽ Hủy
+            đơn hàng & hàng sẽ được chuyển lại cho shop.<br> Lúc giao hàng cho người dùng, ở 1 số chỗ đứng chắc chắn quý khách sẽ được xem hàng trước. Trong trường hợp hàng giao ko đúng hoặc món đồ ko tương tự trình bày người mua có thể khước từ nhận
+            hàng mà Chưa hẳn tốn bất kì một khoản thanh toán nào.<br> * <b>Lưu ý:</b><br> - Các bạn được nhìn nhận & ướm thử , nhưng ko được thử hàng.<br> - Trong trường hợp nhân viên giao đúng giao dịch nhưng sản phẩm ko hợp với khách hàng, người mua
+            có thể đề xuất chuyên viên đổi lại mặt hàng khác cho người dùng.
+            <br> - các bạn hãy ghi chú lại sản phẩm ham muốn đổi trả cho giao hàng.<br>
+            <b>Shop giao hàng từ 7 giờ sáng tới 6 giờ chiều trừ chủ nhật</b><br>
+            <u>Để được tư vấn hổ trợ đơn hàng:</u>
+
+            </blockquote>
+            </span>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="clearfix">
+    </div>
+    <div class="footer">
+        <div class="footer-info">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="footer-logo">
+                            <img src="../images/logo/logo.png" alt="" class="w-50">
+
+                            <p class="text-left">Ra đời từ năm 2012, chỉ từ một cửa hàng thời trang nhỏ, đến nay NHDstyle đã không ngừng phát triển và trở thành một hệ thống cửa hàng chuyên kinh doanh thời trang trẻ, là một trong những thương hiệu thời trang hàng đầu tại
+                                Đà Nẵng...</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <h4 class="title">
+                            Thông Tin
+                            <strong>
+                                Liên Hệ
+                            </strong>
+                        </h4>
+                        <p>
+                            101B, Lê Hữu Trác, Đà Nẵng
+                        </p>
+                        <p>
+                            0355 627 835
+                        </p>
+                        <p>
+                            huy@gamil.com
+                        </p>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <h4 class="title">
+                            Hỗ Trợ
+                            <strong>
+                                Khách Hàng
+                            </strong>
+                        </h4>
+                        <ul class="support">
+                            <li>
+                                <a href="#">
+                                    Chính sách bảo mật
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Phương Thức Thanh Toán
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Thông Tin
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h4 class="title">
+                            Nhận Thông Tin
+                            <strong>
+                                Mới nhất
+                            </strong>
+                        </h4>
+                        <p>
+                            Nhập Email đăng ký nhận thông tin
+                        </p>
+                        <form class="newsletter">
+                            <input type="text" name="" placeholder="Nhập Email....">
+                            <input type="submit" value="Đăng ký" class="button">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-info">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>
+                            Project Basic web design
+                            <a href="#">
+                                Group NHD
+                            </a>. Toppic Bán hàng
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="social-icon">
+                            <li>
+                                <a href="#" class="google-plus">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="twitter">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="facebook">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

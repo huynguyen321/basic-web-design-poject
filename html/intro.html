@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>NHDstyle</title>
+    <link rel="shortcut icon" href="../images/logo/logo.png">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dINHDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <script defer src="https://use.fontawesome.com/releases/v5.1.1/js/all.js" integrity="sha384-BtvRZcyfv4r0x/phJt9Y9HhnN5ur1Z+kZbKVgzVBAlQZX4jvAuImlIz+bG7TS00a" crossorigin="anonymous"></script>
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../css/intro.css">
+
+</head>
+
+<body>
+
+    <header>
+        <div class="col-md-12" style="background-color: rgb(206, 206, 206);">
+            <div class="container top">
+                <div class="col-md-6 float-left">CSKH: 0355 627 835</div>
+                <div class="col-md-6" id="top-icon">
+                    <a href="#"><i class="fab fa-facebook-square"></i></a>
+                    <a href="#"><i class="fab fa-facebook-messenger"></i></a>
+                    <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="navbar">
+            <div class="container">
+                <div class="col-md-2 text-center">
+                    <a href="../html/index.html">
+                        <img src="../images/logo/logo.png" alt="LOGO" class="img-fluid w-90 p-2">
+                    </a>
+                </div>
+
+                <div class="search col-md-5">
+                    <input id="search-bar" type="search" placeholder="Search" aria-label="Search">
+                    <button class="button" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                </div>
+
+
+                <div class="col-md item text-center" id="control-accout">
+                    <button>
+                        <i class="fas fa-clipboard-list fa-fw"></i>Theo dõi đơn hàng
+                    </button>
+                    <button onclick="callFormSignIn()" data-toggle="modal" data-target="#loginModal">
+                        <i class=" fa fa-user fa-fw" aria-hidden="true"></i>Đăng nhập
+                    </button>
+                    <button onclick="callFormSignUp()" data-toggle="modal" data-target="#signUpModal">
+                        <i class="fa fa-key fa-fw"></i> Đăng ký
+                    </button>
+                </div>
+                <div id="form-sign-in"></div>
+                <div id="form-sign-up"></div>
+            </div>
+        </div>
+
+        <nav class="container navbar navbar-expand-md navi" id="headnav">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-bars" aria-hidden="true"></i>Danh mục sản phẩm
+                    </a>
+                    <div class="dropdown-menu drop" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Nữ</a>
+                        <a class="dropdown-item" href="#">Nam</a>
+                        <a class="dropdown-item" href="#">Đồ đôi</a>
+                        <a class="dropdown-item" href="#">Thời trang thu-đông</a>
+                    </div>
+                </div>
+
+                <div class="navbar-nav main-nav" id="my-main-nav">
+                    <button class="nav-item">
+                        <a class="nav-link" href="../html/index.html">Trang chủ <span
+                                class="sr-only">(current)</span></a>
+                    </button>
+                    <button class="nav-item">
+                        <a class="nav-link" href="../html/intro.html">Giới thiệu</a>
+                    </button>
+                    <button class="nav-item">
+                        <a class="nav-link" href="../html/ServicePage.html">Dịch vụ</a>
+                    </button>
+                    <button class="nav-item">
+                        <a class="nav-link" href="../html/about.html">Liên hệ</a>
+                    </button>
+
+                    <button class="nav-item option-cart">
+                        <div class=""><i class="fa fa-shopping-cart" aria-hidden="true"></i>Giỏ hàng
+                            <span class="cart_no" id="cart_no">0</span>
+                        </div>
+                        <div class="dropdown-menu option-cart-item" aria-labelledby="navbarDropdown">
+                            <ul class="col-12 col-md-12">
+                                <li id="shopping-cart">
+                                    <div class="cart-item">
+                                        <div class="image"><img
+                                                src="https://fmstyle.com.vn/images/anhnho/787290_1787551762__MG_1962.jpg"
+                                                alt="">
+                                        </div>
+                                        <div class="item-description">
+                                            <p class="name">Vay co V nhun duoi ca VU1511A</p>
+                                            <p>Size: <span class="light-red">L</span><br>Số lượng: <span
+                                                    class="light-red">01</span></p>
+                                        </div>
+                                        <div class="right">
+                                            <p class="price">130.000đ</p>
+                                            <i class="fa fa-times remove" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </li>
+
+
+                                <li style="border: none;">
+                                    <div class="row text-left col-6 col-md-6">
+                                        <div class="col-6 col-md-6">Tổng</div>
+                                        <div class="col-6 col-md-6" id="total">130.000đ</div>
+                                    </div>
+                                    <div class="btn btn-outline-danger">Thanh toán</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </button>
+
+
+                </div>
+            </div>
+
+            <script>
+                // Script for top Navigation Menu
+                jQuery(window).bind('scroll', function() {
+                    if (jQuery(window).scrollTop() > 100) {
+                        jQuery('#headnav').addClass('fixed-top').removeClass('navi');
+                    } else {
+                        jQuery('#headnav').removeClass('fixed-top').addClass('navi');
+                    }
+                });
+            </script>
+
+            <!-- <div id="nav-bar-repon"></div> -->
+
+        </nav>
+    </header>
+
+    <div class="divtong container-fluid">
+        <div class="container">
+            <!-- Div hinh anh 1-->
+            <div class="divimg1">
+                <img src="https://www.for-believers.com/clients/forbelievers/themes/uploads/1434040442_110615.jpg">
+            </div>
+
+            <!-- Div van ban -->
+            <div class="divtext">
+                <!-- Div văn bản 1 -->
+                <div class="divtext1">
+                    <br>
+                    <p class="H1">GIỚI THIỆU</p>
+                    <p class="H2">Thông tin chung về HND Style SHOP:</p>
+                    <p class="H4"><span class="H3"><b>HND Style SHOP</b></span> là nhà cung cấp các sản phẩm thị trường online hàng đầu Việt Nam. HND Style phát triển với định hướng mang tới cho người tiêu dùng các sản phẩm về áo quần chất lượng tốt, mẫu mã đẹp, giá
+                        cả hợp lý.Thông qua công nghệ 5.0.0, các sản phẩm đều được xử lý qua MXH. HDN Style là một trong những trang Web bán hàng chất lượng hàng đầu đang trong đà phát triển mạnh mẽ, chúng tôi chú trọng chất lượng sản phẩm đầu ra và đầu
+                        vào nhằm cúng cấp sản phẩm dịch vụ tốt nhất cho người tiêu dùng.
+                        <br>
+                        <span class="H5"><b>Tầm nhìn: </b></span>Trở thành nhà cung cấp sản phầm Dịch vụ áo quần chất lượng hàng đầu Việt Nam.<br>
+                        <span class="H5"><b>Sứ mệnh: </b></span>Nghiên cứu phát triển các giải pháp công nghệ, truyền thông trực tuyến vì mục tiêu phát triển và tạo dựng giá trị bền vững cho doanh nghiệp.<br>
+                        <span class="H5"><b>Giá trị cốt lõi: </b></span><br>
+                        <i>-Chuyên nghiệp: </i>Am hiểu công việc, ý thức kỷ luật, luôn có thái độ tích cực và cởi mở trong giao tiếp.<br>
+                        <i>-Tận tâm: </i> Một tinh thần trách nhiệm cao cùng với sự nỗ lực hết mình sẽ là sức mạnh to lớn vượt qua mọi khó khăn, thử thách để đạt được những mục tiêu đã đề ra. Tận tâm vì khách hàng, tận
+                        tâm trong công việc là triết lý hàng đầu trong suy nghĩ và hành động hướng tới vì mục tiêu phát triển chung.<br>
+                        <i>-Đổi mới: </i>Luôn luôn cập nhật kỹ thuật công nghệ, mang lại giá trị hiệu quả đến khách hàng.
+                        <br>
+                        <i>-Sáng tạo: </i>Học hỏi, nâng cao năng lực bản thân trong quá trình làm việc luôn luôn suy nghĩ, tìm tòi và học hỏi để tìm ra cái mới, cách giải quyết tốt nhất để đạt được hiệu quả tốt nhất.
+                        <br>
+                        <i>-Bền vững: </i>Phát triển toàn diện về mọi mặt, giá trị cốt lõi luôn song hành với sự phát triển của HND Style.
+                    </p>
+                </div>
+            </div>
+
+            <br>
+            <br>
+            <!-- Div hình ảnh 2 -->
+            <div class="divimg2">
+                <div class="divimg2left">
+                    <img src="https://lh3.googleusercontent.com/-wCJkH5EgXNA/YA4zwKPEY2I/AAAAAAAAAT4/UgFvyAOdQYwmfdFRSQKCzLpvgemsk9WCgCK8BGAsYHg/s250/LOGO.png">
+                </div>
+                <div class="divimg2right">
+                    <img src="https://dpsayings.com/wp-content/uploads/2020/03/Featured-Image-for-never-give-up-quotes.jpg">
+                </div>
+            </div>
+            <!-- Div văn bản 2 -->
+            <div class="divtext">
+                <div class="divtext1">
+                    <p>
+                        <br>
+                        <span class="H2">Uy tín, chất lượng là yếu tố hàng đầu</span><br><br> Giữa hàng trăm <span class="H3">Công ty bán hàng
+                            online Chuyên nghiệp</span>, để giữ vừng được chỗ đúng trên thị trường công nghệ,
+                        <span class="H3">HND Style </span>luôn lấy uy tín, chất lượng làm yếu tố hàng đầu. Đến với <span class="H3">Webstite Áo
+                            quần</span> của HND Style shop, khách hàng sẽ nhận được những mẫu thiết kế bắt mắt, chất lượng và đa dạng.
+                        <br><br>
+                        <span class="H3">HND Style</span> không chỉ đi đầu trong lĩnh bán hàng lẻ online mà còn là một trong những nhà phân phối sỉ mang tầm quốc tế. Chúng tôi còn hỗ trợ những công cụ phụ trợ giúp website nhanh chóng được nhiều người
+                        biết đến như <span class="H3">dịch vụ email google, dịch vụ SEO, Content Marketing, Quảng cáo
+                            Google</span> hay những giải pháp Digital Marketing tổng thể giúp nâng cao thứ hạng website của bạn trên công cụ tìm kiếm Google.<br><br>
+                        <span class="H2">Nhân lực-Tài sản vô giá của chúng tôi</span><br><br> Không chỉ nhấn mạnh vào đầu tư cơ sở vật chất, chúng tôi hiểu rằng đầu tư vào con người là khoản đầu tư lâu dài và bền vững nhất. Vì vậy Sky Việt Nam luôn chú
+                        trọng bồi dưỡng nguồn nhân lực đủ sức, đủ tài để tiếp thu những tiến bộ khoa học hiện đại. Với đội ngũ thiết kế trẻ, năng động, ham học hỏi, luôn cập nhật những mẫu thiết kế mới, chúng tôi không chỉ sẵn sàng tư vấn cho quý khách
+                        hàng khi có nhu cầu mà còn luôn song hành cùng bạn trong quá trình vận hành, quản trị <span class="H3">HND Style shop</span>.<br>
+                        <br>
+                        <span class="H2">Lý do nên chọn HND Style shop là đối tượng hàng đầu</span><br><br> - Chất lượng luôn đảm bảo<br> - Giá thành hợp Lý<br> - Website theo chuẩn CEO, dễ sử dụng<br> - Hỗ trợ các giải pháp kinh doanh trực tuyến giúp
+                        phát huy tối đa vai trò của website trong kinh doanh.<br> - Đội ngũ tư vấn khi khách hàng có thắc mắc về dịch vụ
+                    </p>
+                </div>
+            </div>
+
+
+            <br><br>
+            <!-- Div hình ảnh 3 -->
+            <div class="divimg3">
+                <img src="https://skyvietnam.com.vn/uploads/images/sky.jpg">
+            </div>
+
+            <!-- Div văn bản 3 -->
+            <div class="divtext">
+                <div class="divtext1">
+                    <br><br>
+                    <p>
+                        Là một công ty phân phối sản phẩm thị trường trong nước và quốc tế, với đội ngũ kỹ sư năng động nhiệt tình, dám nghĩ, dám làm,
+                        <span class="H3">HND Style</span> cam kết đem đến những gì tốt đẹp nhất cho người tiêu dùng. Đã từng làm việc với nhiều đối tượng khách hàng, thuộc mọi lĩnh vực ngành nghề khác nhau, chúng tôi hiểu rằng sự hài lòng của quý khách
+                        hàng là thước đo thành công cho doanh nghiệp chúng tôi. Vì vậy, chúng tôi luôn trân trọng và lắng nghe ý tưởng, mong mỏi của khách hàng cho sản phẩm chúng tôi luôn đạt hiệu quả tốt nhất.
+                        <br><br> Quý khách có nhu cầu hợp tác, yêu cầu dịch vụ, xin vui lòng liên hệ:
+                        <span class="H2">0986.538.347</span>
+                        <br><br><br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="footer">
+        <div class="footer-info">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="footer-logo">
+
+                            <img src="../images/logo/logo.png" alt="" class="w-50">
+
+                            <p class="text-left">Ra đời từ năm 2012, chỉ từ một cửa hàng thời trang nhỏ, đến nay NHDstyle đã không ngừng phát triển và trở thành một hệ thống cửa hàng chuyên kinh doanh thời trang trẻ, là một trong những thương hiệu thời trang hàng đầu tại
+                                Đà Nẵng...</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <h4 class="title">
+                            Thông Tin
+                            <strong>
+                                Liên Hệ
+                            </strong>
+                        </h4>
+                        <p>
+                            101B, Lê Hữu Trác, Đà Nẵng
+                        </p>
+                        <p>
+                            0355 627 835
+                        </p>
+                        <p>
+                            huy@gamil.com
+                        </p>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <h4 class="title">
+                            Hỗ Trợ
+                            <strong>
+                                Khách Hàng
+                            </strong>
+                        </h4>
+                        <ul class="support">
+                            <li>
+                                <a href="#">
+                                    Chính sách bảo mật
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Phương Thức Thanh Toán
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Thông Tin
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h4 class="title">
+                            Nhận Thông Tin
+                            <strong>
+                                Mới nhất
+                            </strong>
+                        </h4>
+                        <p>
+                            Nhập Email đăng ký nhận thông tin
+                        </p>
+                        <form class="newsletter">
+                            <input type="text" name="" placeholder="Nhập Email....">
+                            <input type="submit" value="Đăng ký" class="button">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-info">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>
+                            Project Basic web design
+                            <a href="#">
+                                Group NHD
+                            </a> . Toppic Bán hàng
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="social-icon">
+                            <li>
+                                <a href="#" class="google-plus">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="twitter">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="facebook">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
